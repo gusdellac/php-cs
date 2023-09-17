@@ -1,9 +1,9 @@
 <?php
     if($_POST){
         //recibir info del formulario HTML (metodo POST)
-        $nombre=$_POST["txtNombre"];
-
-        echo "Hola ".$nombre;
+        $nombre=$_POST["nombre"];
+        $apellido=$_POST["apellido"];
+        echo "Hola ".$nombre." ".$apellido; //concatenacion de string con variables
     }
 
 ?>
@@ -13,12 +13,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Concatenacion</title>
 </head>
 <body>
-    <form action="ejercicio2.php" method="post">
-        <label for="txtNombre">Nombre:</label>
-        <input type="text" name="txtNombre" id="" placeholder="Nombre">
+    <form action="ejercicio5.php" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="idNombre" placeholder="Nombre">
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" name="apellido" id="idApellido" placeholder="Nombre">
+
         <input type="submit" value="Enviar">
     </form>
 </body>
